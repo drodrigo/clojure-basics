@@ -17,8 +17,13 @@
   []
   (list 1 2 3))
 
+; get first
+(defn getStuff
+  []
+  (first [1 2 3])) ; last rest
+
 ; entry function
 (defn -main
   [& args]
-  (let [result (listStuff)]
+  (let [result (getStuff)]
     (println result)))
