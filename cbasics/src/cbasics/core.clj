@@ -12,8 +12,13 @@
   [num1 num2]
   (+ num1 num2)) ; (operator operand1 operand2 .... operandN)
 
+; creating a list
+(defn listStuff
+  []
+  (list 1 2 3))
+
 ; entry function
 (defn -main
   [& args]
-  (let [result (sumStuff 10 3)]
+  (let [result (listStuff)]
     (println result)))
