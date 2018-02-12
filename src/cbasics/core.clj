@@ -37,6 +37,46 @@
   []
   (get {:a 10 :foo "daiego" :c 20} :foo))
 
+; TODO if statements
+
+; TODO for loop
+
+; TODO take
+
+; TODO some
+
+; TODO sort
+
+; TODO filter
+
+; TODO map
+
+; TODO reduce
+
+; TODO drop
+
+; TODO partial application
+
+; TODO lazy sequences
+
+; TODO sequeable abstraction
+
+; TODO apply
+
+; TODO conj 
+
+; TODO into
+
+; TODO macro sample
+
+; TODO delay 
+
+; TODO promise 
+
+; TODO future 
+
+; TODO atoms (maybe)
+
 ; entry function
 (defn -main
   [& args]
