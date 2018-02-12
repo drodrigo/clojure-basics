@@ -22,8 +22,18 @@
   []
   (first [1 2 3])) ; last rest
 
+; get by index
+(defn getStuffByIndex
+  []
+  (nth [1, 2, 3] 1))
+
+; create a hash
+(defn createHash
+  []
+  (hash-map :foo "bar" :bar "foo")) ; or simply {:foo "bar" :foo "bar"}
+
 ; entry function
 (defn -main
   [& args]
-  (let [result (getStuff)]
+  (let [result (createHash)]
     (println result)))
