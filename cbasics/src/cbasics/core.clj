@@ -32,8 +32,13 @@
   []
   (hash-map :foo "bar" :bar "foo")) ; or simply {:foo "bar" :foo "bar"}
 
+; get by value
+(defn getStuffByKey
+  []
+  (get {:a 10 :foo "daiego" :c 20} :foo))
+
 ; entry function
 (defn -main
   [& args]
-  (let [result (createHash)]
+  (let [result (getStuffByIndex)]
     (println result)))
