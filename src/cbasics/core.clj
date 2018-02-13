@@ -37,7 +37,17 @@
   []
   (get {:a 10 :foo "daiego" :c 20} :foo))
 
-; TODO if statements
+(defn ifStuff
+  [age]
+  (if (> age 80)
+   (println "You're going to die soon...")
+   (println "Don't worry, you'll eventually die as well :)")))
+
+; entry function
+(defn -main
+  [& args]
+  (let [result (ifStuff 81)]
+    (println result)))
 
 ; TODO for loop
 
@@ -76,9 +86,3 @@
 ; TODO future 
 
 ; TODO atoms (maybe)
-
-; entry function
-(defn -main
-  [& args]
-  (let [result (getStuffByIndex)]
-    (println result)))
