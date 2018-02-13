@@ -51,13 +51,15 @@
   []
   (take 3 [4 2 2 4 6]))
 
+(defn takeSomeStuff
+  [number]
+  (some #(> number %) '(1 2 5)))
+
 ; entry function
 (defn -main
   [& args]
-  (let [result (takeStuff)]
+  (let [result (takeSomeStuff 2)]
     (println result)))
-
-; TODO some
 
 ; TODO sort
 
