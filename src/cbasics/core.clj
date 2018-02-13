@@ -43,13 +43,16 @@
    (println "You're going to die soon...")
    (println "Don't worry, you'll eventually die as well :)")))
 
+(defn loopStuff
+  []
+  (for [x  (range 1 10)]
+    (* x x)))
+
 ; entry function
 (defn -main
   [& args]
-  (let [result (ifStuff 81)]
+  (let [result (loopStuff)]
     (println result)))
-
-; TODO for loop
 
 ; TODO take
 
