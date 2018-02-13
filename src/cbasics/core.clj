@@ -55,13 +55,15 @@
   [number]
   (some #(> number %) '(1 2 5)))
 
+(defn sortStuff
+  []
+  (sort [3 2 1]))
+
 ; entry function
 (defn -main
   [& args]
-  (let [result (takeSomeStuff 2)]
+  (let [result (sortStuff)]
     (println result)))
-
-; TODO sort
 
 ; TODO filter
 
