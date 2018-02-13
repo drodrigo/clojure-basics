@@ -1,7 +1,6 @@
 (ns cbasics.core
   (:gen-class))
 
-
 ; hello clojure
 (defn printStuff
   [content]
@@ -48,13 +47,15 @@
   (for [x  (range 1 10)]
     (* x x)))
 
+(defn takeStuff
+  []
+  (take 3 [4 2 2 4 6]))
+
 ; entry function
 (defn -main
   [& args]
-  (let [result (loopStuff)]
+  (let [result (takeStuff)]
     (println result)))
-
-; TODO take
 
 ; TODO some
 
