@@ -59,6 +59,10 @@
   []
   (sort [3 2 1]))
 
+(defn mapStuff
+  []
+  (map (fn [x] (* x x)) (range 50)))
+
 (defn filterStuff
   []
   (filter (fn([x] (even? x))) (range 50)))
@@ -66,10 +70,8 @@
 ; entry function
 (defn -main
   [& args]
-  (let [result (filterStuff)]
+  (let [result (mapStuff)]
     (println result)))
-
-; TODO map
 
 ; TODO reduce
 
