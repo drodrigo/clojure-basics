@@ -55,6 +55,10 @@
   [number]
   (some #(> number %) '(1 2 5)))
 
+(defn dropStuff
+  []
+  (drop 2 [0 1 2 3 4]))
+
 (defn sortStuff
   []
   (sort [3 2 1]))
@@ -71,14 +75,14 @@
   []
   (reduce * (range 1 10))) ; applying the function + to each element
 
-(defn dropStuff
+(defn compStuff
   []
-  (drop 2 [0 1 2 3 4]))
+  ((comp (fn([x] (conj [] x))) +) 1 10))
 
 ; entry function
 (defn -main
   [& args]
-  (let [result (dropStuff)]
+  (let [result (compStuff)]
     (println result)))
 
 ; TODO conj 
