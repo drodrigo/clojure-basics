@@ -67,29 +67,34 @@
   []
   (filter (fn([x] (even? x))) (range 50)))
 
+(defn reduceStuff
+  []
+  (reduce * (range 1 10))) ; applying the function + to each element
+
 ; entry function
 (defn -main
   [& args]
-  (let [result (mapStuff)]
+  (let [result (reduceStuff)]
     (println result)))
 
 ; TODO reduce
 
 ; TODO drop
 
+; TODO conj 
+
+; TODO into
+
+
 ; TODO partial application
+
+; TODO macro sample
 
 ; TODO lazy sequences
 
 ; TODO sequeable abstraction
 
 ; TODO apply
-
-; TODO conj 
-
-; TODO into
-
-; TODO macro sample
 
 ; TODO delay 
 
