@@ -71,15 +71,15 @@
   []
   (reduce * (range 1 10))) ; applying the function + to each element
 
+(defn dropStuff
+  []
+  (drop 2 [0 1 2 3 4]))
+
 ; entry function
 (defn -main
   [& args]
-  (let [result (reduceStuff)]
+  (let [result (dropStuff)]
     (println result)))
-
-; TODO reduce
-
-; TODO drop
 
 ; TODO conj 
 
