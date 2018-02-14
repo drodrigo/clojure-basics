@@ -79,18 +79,13 @@
   []
   ((comp (fn([x] (conj [] x))) +) 1 10))
 
+(def meaningOfLife (partial + 41)) ; #nemli
+
 ; entry function
 (defn -main
   [& args]
-  (let [result (compStuff)]
+  (let [result (meaningOfLife 1)]
     (println result)))
-
-; TODO conj 
-
-; TODO into
-
-
-; TODO partial application
 
 ; TODO macro sample
 
