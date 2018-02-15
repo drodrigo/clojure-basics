@@ -47,6 +47,10 @@
   (for [x  (range 1 10)]
     (* x x)))
 
+(defn applyStuff
+  []
+  (apply + '(1 2)))
+
 (defn takeStuff
   []
   (take 3 [4 2 2 4 6]))
@@ -65,7 +69,7 @@
 
 (defn mapStuff
   []
-  (map (fn [x] (* x x)) (range 50)))
+  (map (fn [x] (* x x)) (range 50))) ; returns a lazy sequence
 
 (defn filterStuff
   []
@@ -84,16 +88,10 @@
 ; entry function
 (defn -main
   [& args]
-  (let [result (meaningOfLife 1)]
+  (let [result (applyStuff)]
     (println result)))
 
 ; TODO macro sample
-
-; TODO lazy sequences
-
-; TODO sequeable abstraction
-
-; TODO apply
 
 ; TODO delay 
 
