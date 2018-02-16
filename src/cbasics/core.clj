@@ -85,13 +85,15 @@
 
 (def meaningOfLife (partial + 41)) ; #nemli
 
+(defmacro if-sqn [pred foo-expr bar-expr]
+  `(if (not ~pred) ~foo-expr ~bar-expr)) ; (macroexpand '(if-sqn false (println "Meu objetivo é a CONQUISTAAAA!!!") (println "Parece que piorou"))))
+
 ; entry function
 (defn -main
   [& args]
-  (let [result (applyStuff)]
-    (println result)))
-
-; TODO macro sample
+  ; (let [result (applyStuff)]
+  ;   (println result)))
+  (if-sqn false (println "Meu objetivo é a CONQUISTAAAA!!!") (println "Parece que piorou")))
 
 ; TODO delay 
 
